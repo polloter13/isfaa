@@ -4,11 +4,6 @@ const gallery2 = document.getElementById("gallery2");
 const images2 = gallery2.querySelectorAll(".image-cell");
 const modal = document.getElementById("modal-container");
 const images = gallery.querySelectorAll(".image-cell");
-const videos = document.querySelectorAll(".video");
-const videos2 = document.querySelectorAll(".video2");
-
-const videosURL = ["xezer xeber.mp4"];
-const videosURL2 = ["verlis1.m4v", "verlis2.m4v"];
 
 const imagesURL = ["1.jpg", "2.jpeg", "3.jpeg", "4.jpeg", "5.jpeg", "6.jpeg"];
 const images2URL = [
