@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block header %}
+<title>Bağ-bostan alətləri</title>
+<link rel="stylesheet" href="{% static 'css/tools.css' %}">
+{% endblock %}
+
+{% block content %}
+{% include 'navbar.html' %}
+
+<main>
+    {% for tool in tools %}
+    <div class="tool">
+        <div class="tool-image-container">
+            <img src="/static/{{ tool.image }}" alt="{{ tool.name }}">
+        </div>
+        <p>{{ tool.name }}</p>
+    </div>
+    {% endfor %}
+</main>
+
+{% include 'footer.html' %}
+
+{% endblock %}

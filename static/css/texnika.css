@@ -1,0 +1,36 @@
+main{
+    width: 90%;
+    height: 100%;
+    margin: auto;
+
+}
+
+section {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+}
+
+section img {
+    height: 100%;
+    width: 100%;
+}
+
+section p {
+    text-align: center;
+}
+
+
+.item {
+    cursor: pointer;
+}
+
+@media (max-width: 750px) {
+    section p {
+        font-size: .7em;
+    }
+    section {
+        gap: 2.5em;
+    }
+}

@@ -1,0 +1,38 @@
+main {
+    width: 80%;
+    margin: auto;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.image-container {
+    flex: 0 0 30%;
+    cursor: pointer;
+}
+
+.image-container p {
+    text-align: center;
+}
+
+.image-container img {
+    width: 100%;
+}
+
+@media (max-width: 500px) {
+    .image-container p {
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 750px) {
+    .container {
+        gap: 0.6rem;
+    }
+}

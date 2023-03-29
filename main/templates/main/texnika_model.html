@@ -1,0 +1,642 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block header %}
+<title>{{ texnika.ad }}</title>
+<link rel="stylesheet" href="{% static 'css/texnika_model.css' %}">
+{% endblock %}
+
+{% block content %}
+{% include 'navbar.html' %}
+
+<main>
+    <div class="image-container">
+        <img src="/static/{{ texnika.image }}" alt="{{ texnika.ad }}">
+    </div>
+    <div class="content-container">
+        <section class="info-container">
+            <h1>{{ texnika.ad }}</h1>
+            {% if count == 1 %}
+            <div class="fields-container">
+            {% for item in model %}
+                {% if item.model %}
+                <div class="info">
+                    <p><b>Model</b></p>
+                    <p>{{ item.model }}</p>
+                </div>
+                {% endif %}
+                {% if item.marka %}
+                <div class="info">
+                    <p><b>Marka</b></p>
+                    <p>{{ item.marka }}</p>
+                </div>
+                {% endif %}
+                {% if item.urun_kodu %}
+                <div class="info">
+                    <p><b>Ürün kodu</b></p>
+                    <p>{{ item.urun_kodu }}</p>
+                </div>
+                {% endif %}
+                {% if item.tank %}
+                <div class="info">
+                    <p><b> Tank</b></p>
+                    <p>{{ item.tank }} lt</p>
+                </div>
+                {% endif %}
+                {% if item.pompa %}
+                <div class="info">
+                    <p><b>Pompa</b></p>
+                    <p>{{ item.pompa }} lt/dq</p>
+                </div>
+                {% endif %}
+                {% if item.traktor_gucu %}
+                <div class="info">
+                    <p><b>Traktor gücü</b></p>
+                    <p>{{ item.traktor_gucu }} HP</p>
+                </div>
+                {% endif %}
+                {% if item.tezyiq %}
+                <div class="info">
+                    <p><b>Təzyiq</b></p>
+                    <p>{{ item.tezyiq }} bar</p>
+                </div>
+                {% endif %}
+                {% if item.hava %}
+                <div class="info">
+                    <p><b> Hava</b></p>
+                    <p>{{ item.hava }} m<sup>3</sup>/h</p>
+                </div>
+                {% endif %}
+                {% if item.agirliq %}
+                <div class="info">
+                    <p><b>Ağırlıq</b></p>
+                    <p>{{ item.agirliq }}</p>
+                </div>
+                {% endif %}
+                {% if item.is_hecmi %}
+                <div class="info">
+                    <p><b>İş həcmi</b></p>
+                    <p>{{ item.is_hecmi }}</p>
+                </div>
+                {% endif %}
+                {% if item.enerji_menbeyi %}
+                <div class="info">
+                    <p><b>Enerji mənbəyi</b></p>
+                    <p>{{ item.enerji_menbeyi }}</p>
+                </div>
+                {% endif %}
+                {% if item.qaranti %}
+                <div class="info">
+                    <p><b>Qaranti</b></p>
+                    <p>{{ item.qaranti }} il</p>
+                </div>
+                {% endif %}
+                {% if item.saatliq_mehsul %}
+                <div class="info">
+                    <p><b>Saatlıq məhsul</b></p>
+                    <p>{{ item.saatliq_mehsul }}</p>
+                </div>
+                {% endif %}
+                {% if item.ayirma %}
+                <div class="info">
+                    <p><b>Ayırma</b></p>
+                    <p>{{ item.ayirma }}</p>
+                </div>
+                {% endif %}
+                {% if item.enerji_ehtiyaci %}
+                <div class="info">
+                    <p><b>Enerji ehtiyacı</b></p>
+                    <p>{{ item.enerji_ehtiyaci }}</p>
+                </div>
+                {% endif %}
+                {% if item.guc %}
+                <div class="info">
+                    <p><b>pGüc</b></p>
+                    <p>{{ item.guc }}</p>
+                </div>
+                {% endif %}
+                {% if item.hecm %}
+                <div class="info">
+                    <p><b> Həcm</b></p>
+                    <p>{{ item.hecm }}</p>
+                </div>
+                {% endif %}
+                {% if item.motor_gucu %}
+                <div class="info">
+                    <p><b>Motor gücü</b></p>
+                    <p>{{ item.motor_gucu }}</p>
+                </div>
+                {% endif %}
+                {% if item.guc_telebati %}
+                <div class="info">
+                    <p><b>Güc tələbatı</b></p>
+                    <p>{{ item.guc_telebati }}</p>
+                </div>
+                {% endif %}
+                {% if item.bicaq_sayi %}
+                <div class="info">
+                    <p><b>Bıçaq sayı</b></p>
+                    <p>{{ item.bicaq_sayi }}</p>
+                </div>
+                {% endif %}
+                {% if item.kazan_hacmi %}
+                <div class="info">
+                    <p><b>Kazan həcmi</b></p>
+                    <p>{{ item.kazan_hacmi }}</p>
+                </div>
+                {% endif %}
+                {% if item.calisma_yuksekligi %}
+                <div class="info">
+                    <p><b>Çalışma yüksəkliyi</b></p>
+                    <p>{{ item.calisma_yuksekligi }}</p>
+                </div>
+                {% endif %}
+                {% if item.calisma_uzunlugu %}
+                <div class="info">
+                    <p><b>Çalışma uzunluğu</b></p>
+                    <p>{{ item.calisma_uzunlugu }}</p>
+                </div>
+                {% endif %}
+                {% if item.calisma_yonu %}
+                <div class="info">
+                    <p><b>Çalışma yönü</b></p>
+                    <p>{{ item.calisma_yonu }}</p>
+                </div>
+                {% endif %}
+                {% if item.ceviz_qurutma_qabilliyyeti %}
+                <div class="info">
+                    <p><b>Ceviz qurutma qabiliyyəti</b></p>
+                    <p>{{ item.ceviz_qurutma_qabilliyyeti }}</p>
+                </div>
+                {% endif %}
+                {% if item.guc_gereksinimi %}
+                <div class="info">
+                    <p><b>Güc gereksinimi</b></p>
+                    <p>{{ item.guc_gereksinimi }}</p>
+                </div>
+                {% endif %}
+                {% if item.hidrolik_gereksinimi %}
+                <div class="info">
+                    <p><b>Hidrolik gereksinimi</b></p>
+                    <p>{{ item.hidrolik_gereksinimi }}</p>
+                </div>
+                {% endif %}
+                {% if item.traktor_orta_noktasindan_max_kol_uzunlugu %}
+                <div class="info">
+                    <p><b>Traktor orta nöqtəsindən max qol uzunluğu</b></p>
+                    <p>{{ item.traktor_orta_noktasindan_max_kol_uzunlugu }}</p>
+                </div>
+                {% endif %}
+                {% if item.calisma_derinligi %}
+                <div class="info">
+                    <p><b>Çalışma dərinliyi</b></p>
+                    <p>{{ item.calisma_derinligi }}</p>
+                </div>
+                {% endif %}
+                {% if item.capalama_genisligi %}
+                <div class="info">
+                    <p><b>Çapalama genişliyi</b></p>
+                    <p>{{ item.capalama_genisligi }} </p>
+                </div>
+                {% endif %}
+                {% if item.agac_sira_arasi %}
+                <div class="info">
+                    <p><b>Ağac sıra arası</b></p>
+                    <p>{{ item.agac_sira_arasi }} </p>
+                </div>
+                {% endif %}
+                {% if item.umumi_genislik %}
+                <div class="info">
+                    <p><b>Ümumi genişlik</b></p>
+                    <p>{{ item.umumi_genislik }} </p>
+                </div>
+                {% endif %}
+                {% if item.isleme_genisliyi %}
+                <div class="info">
+                    <p><b>İşləmə genişliyi</b></p>
+                    <p>{{ item.isleme_genisliyi }} </p>
+                </div>
+                {% endif %}
+                {% if item.ilerleme_sureti %}
+                <div class="info">
+                    <p><b>İlərləmə sürəti</b></p>
+                    <p>{{ item.ilerleme_sureti }}</p>
+                </div>
+                {% endif %}
+                {% if item.ozellik_1 %}
+                <div class="info">
+                    <p><b>Özəllik 1</b></p>
+                    <p>{{ item.ozellik_1 }}</p>
+                </div>
+                {% endif %}
+                {% if item.ozellik_2 %}
+                <div class="info">
+                    <p><b>Özəllik 2</b></p>
+                    <p>{{ item.ozellik_2 }}</p>
+                </div>
+                {% endif %}
+                {% if item.ozellik_3 %}
+                <div class="info">
+                    <p><b>Özəllik 3</b></p>
+                    <p>{{ item.ozellik_3 }}</p>
+                </div>
+                {% endif %}
+                {% if item.ozellik_4 %}
+                <div class="info">
+                    <p><b>Özəllik 4</b></p>
+                    <p>{{ item.ozellik_4 }}</p>
+                </div>
+                {% endif %}
+                
+                
+                {% endfor %}
+            {% else %}
+                <div class="fields-container-grid">
+                            {% if model.0.model %}
+                            <div>
+                                <p id="header"><b>Model</b></p>
+                            </div>
+                            {% endif %}
+                            {% if model.0.marka %}
+                            <div>
+                                <p id="header"><b>Marka</b></p>
+                            </div>
+                            {% endif %}
+                            {% if model.0.tank %}
+                            <div>
+                                <p id="header"><b> Tank</b></p>
+                            </div>
+                            {% endif %}
+                            {% if model.0.pompa %}
+                            <div>
+                                <p id="header"><b>Pompa</b></p>
+                            </div>
+                            {% endif %}
+                            {% if model.0.traktor_gucu %}
+                            <div>
+                                <p id="header"><b>Traktor gücü</b></p>
+                            </div>
+                            {% endif %}
+                            {% if model.0.tezyiq %}
+                            <div>
+                                <p id="header"><b>Təzyiq</b></p>
+                            </div>
+                            {% endif %}
+                            {% if model.0.hava %}
+                            <div>
+                                <p id="header"><b> Hava</b></p>
+                            </div>
+                            {% endif %}
+                            {% if model.0.agirliq %}
+                            <div>
+                                <p id="header"><b>Ağırlıq</b></p>
+                            </div>
+                            {% endif %}
+                            {% if model.0.is_hecmi %}
+                            <div>
+                                <p id="header"><b>İş həcmi</b></p>
+                            </div>
+                            {% endif %}
+                            {% if model.0.enerji_menbeyi %}
+                            <div>
+                                <p id="header"><b>Enerji mənbəyi</b></p>
+                            </div>
+                            {% endif %}
+                            {% if model.0.qaranti %}
+                            <div>
+                                <p id="header"><b>Qaranti</b></p>
+                            </div>
+                            {% endif %}
+                            {% if model.0.saatliq_mehsul %}
+                            <div>
+                                <p id="header"><b>Saatlıq məhsul</b></p>
+                            </div>
+                            {% endif %}
+                            {% if model.0.ayirma %}
+                            <div>
+                                <p id="header"><b>Ayırma</b></p>
+                            </div>
+                            {% endif %}
+                            {% if model.0.enerji_ehtiyaci %}
+                            <div>
+                                <p id="header"><b>Enerji ehtiyacı</b></p>
+                            </div>
+                            {% endif %}
+                            {% if model.0.guc %}
+                            <div>
+                                <p id="header"><b>pGüc</b></p>
+                            </div>
+                            {% endif %}
+                            {% if model.0.hecm %}
+                            <div>
+                                <p id="header"><b> Həcm</b></p>
+                            </div>
+                            {% endif %}
+                            {% if model.0.motor_gucu %}
+                            <div>
+                                <p id="header"><b>Motor gücü</b></p>
+                            </div>
+                            {% endif %}
+                            {% if model.0.guc_telebati %}
+                            <div>
+                                <p id="header"><b>Güc tələbatı</b></p>
+                            </div>
+                            {% endif %}
+                            {% if model.0.bicaq_sayi %}
+                            <div>
+                                <p id="header"><b>Bıçaq sayı</b></p>
+                            </div>
+                            {% endif %}
+                            {% if model.0.kazan_hacmi %}
+                            <div>
+                                <p id="header"><b>Kazan həcmi</b></p>
+                            </div>
+                            {% endif %}
+                            {% if model.0.calisma_yuksekligi %}
+                            <div>
+                                <p id="header"><b>Çalışma yüksəkliyi</b></p>
+                            </div>
+                            {% endif %}
+                            {% if model.0.calisma_uzunlugu %}
+                            <div>
+                                <p id="header"><b>Çalışma uzunluğu</b></p>
+                            </div>
+                            {% endif %}
+                            {% if model.0.calisma_yonu %}
+                            <div>
+                                <p id="header"><b>Çalışma yönü</b></p>
+                            </div>
+                            {% endif %}
+                            {% if model.0.ceviz_qurutma_qabilliyyeti %}
+                            <div>
+                                <p id="header"><b>Ceviz qurutma qabiliyyəti</b></p>
+                            </div>
+                            {% endif %}
+                            {% if model.0.guc_gereksinimi %}
+                            <div>
+                                <p id="header"><b>Güc gereksinimi</b></p>
+                            </div>
+                            {% endif %}
+                            {% if model.0.hidrolik_gereksinimi %}
+                            <div>
+                                <p id="header"><b>Hidrolik gereksinimi</b></p>
+                            </div>
+                            {% endif %}
+                            {% if model.0.traktor_orta_noktasindan_max_kol_uzunlugu %}
+                            <div>
+                                <p id="header"><b>Traktor orta nöqtəsindən max qol uzunluğu</b></p>
+                            </div>
+                            {% endif %}
+                            {% if model.0.calisma_derinligi %}
+                            <div>
+                                <p id="header"><b>Çalışma dərinliyi</b></p>
+                            </div>
+                            {% endif %}
+                            {% if model.0.capalama_genisligi %}
+                            <div>
+                                <p id="header"><b>Çapalama genişliyi</b></p>
+                            </div>
+                            {% endif %}
+                            {% if model.0.agac_sira_arasi %}
+                            <div>
+                                <p id="header"><b>Ağac sıra arası</b></p>
+                            </div>
+                            {% endif %}
+                            {% if model.0.umumi_genislik %}
+                            <div>
+                                <p id="header"><b>Ümumi genişlik</b></p>
+                            </div>
+                            {% endif %}
+                            {% if model.0.isleme_genisliyi %}
+                            <div>
+                                <p id="header"><b>İşləmə genişliyi</b></p>
+                            </div>
+                            {% endif %}
+                            {% if model.0.ilerleme_sureti %}
+                            <div>
+                                <p id="header"><b>İlərləmə sürəti</b></p>
+                            </div>
+                            {% endif %}
+                            {% if model.0.ozellik_1 %}
+                            <div>
+                                <p id="header"><b>Özəllik 1</b></p>
+                            </div>
+                            {% endif %}
+                            {% if model.0.ozellik_2 %}
+                            <div>
+                                <p id="header"><b>Özəllik 2</b></p>
+                            </div>
+                            {% endif %}
+                            {% if model.0.ozellik_3 %}
+                            <div>
+                                <p id="header"><b>Özəllik 3</b></p>
+                            </div>
+                            {% endif %}
+                            {% if model.0.ozellik_4 %}
+                            <div>
+                                <p id="header"><b>Özəllik 4</b></p>
+                            </div>
+                            {% endif %}
+                        {% for item in model %}
+                                {% if item.model %}
+                                <div>
+                                    <p>{{ item.model }}</p>
+                                </div>
+                                {% endif %}
+                                {% if item.marka %}
+                                <div>
+                                    <p>{{ item.marka }}</p>
+                                    {% if item.urun_kodu %}
+                                    <span>{{ item.urun_kodu }}</span>
+                                    {% endif %}
+                                </div>
+                                {% endif %}
+                                {% if item.tank %}
+                                <div>
+                                    <p>{{ item.tank }} lt</p>
+                                </div>
+                                {% endif %}
+                                {% if item.pompa %}
+                                <div>
+                                    <p>{{ item.pompa }} lt/dq</p>
+                                </div>
+                                {% endif %}
+                                {% if item.traktor_gucu %}
+                                <div>
+                                    <p>{{ item.traktor_gucu }}</p>
+                                </div>
+                                {% endif %}
+                                {% if item.tezyiq %}
+                                <div>
+                                    <p>{{ item.tezyiq }} bar</p>
+                                </div>
+                                {% endif %}
+                                {% if item.hava %}
+                                <div>
+                                    <p>{{ item.hava }} m<sup>3</sup>/h</p>
+                                </div>
+                                {% endif %}
+                                {% if item.agirliq %}
+                                <div>
+                                    <p>{{ item.agirliq }}</p>
+                                </div>
+                                {% endif %}
+                                {% if item.is_hecmi %}
+                                <div>
+                                    <p>{{ item.is_hecmi }}</p>
+                                </div>
+                                {% endif %}
+                                {% if item.enerji_menbeyi %}
+                                <div>
+                                    <p>{{ item.enerji_menbeyi }}</p>
+                                </div>
+                                {% endif %}
+                                {% if item.qaranti %}
+                                <div>
+                                    <p>{{ item.qaranti }} il</p>
+                                </div>
+                                {% endif %}
+                                {% if item.saatliq_mehsul %}
+                                <div>
+                                    <p>{{ item.saatliq_mehsul }}</p>
+                                </div>
+                                {% endif %}
+                                {% if item.ayirma %}
+                                <div>
+                                    <p>{{ item.ayirma }}</p>
+                                </div>
+                                {% endif %}
+                                {% if item.enerji_ehtiyaci %}
+                                <div>
+                                    <p>{{ item.enerji_ehtiyaci }}</p>
+                                </div>
+                                {% endif %}
+                                {% if item.guc %}
+                                <div>
+                                    <p>{{ item.guc }}</p>
+                                </div>
+                                {% endif %}
+                                {% if item.hecm %}
+                                <div>
+                                    <p>{{ item.hecm }}</p>
+                                </div>
+                                {% endif %}
+                                {% if item.motor_gucu %}
+                                <div>
+                                    <p>{{ item.motor_gucu }}</p>
+                                </div>
+                                {% endif %}
+                                {% if item.guc_telebati %}
+                                <div>
+                                    <p>{{ item.guc_telebati }}</p>
+                                </div>
+                                {% endif %}
+                                {% if item.bicaq_sayi %}
+                                <div>
+                                    <p>{{ item.bicaq_sayi }}</p>
+                                </div>
+                                {% endif %}
+                                {% if item.kazan_hacmi %}
+                                <div>
+                                    <p>{{ item.kazan_hacmi }}</p>
+                                </div>
+                                {% endif %}
+                                {% if item.calisma_yuksekligi %}
+                                <div>
+                                    <p>{{ item.calisma_yuksekligi }}</p>
+                                </div>
+                                {% endif %}
+                                {% if item.calisma_uzunlugu %}
+                                <div>
+                                    <p>{{ item.calisma_uzunlugu }}</p>
+                                </div>
+                                {% endif %}
+                                {% if item.calisma_yonu %}
+                                <div>
+                                    <p>{{ item.calisma_yonu }}</p>
+                                </div>
+                                {% endif %}
+                                {% if item.ceviz_qurutma_qabilliyyeti %}
+                                <div>
+                                    <p>{{ item.ceviz_qurutma_qabilliyyeti }}</p>
+                                </div>  
+                                {% endif %}
+                                {% if item.guc_gereksinimi %}
+                                <div>
+                                    <p>{{ item.guc_gereksinimi }}</p>
+                                </div>
+                                {% endif %}
+                                {% if item.hidrolik_gereksinimi %}
+                                <div>
+                                    <p>{{ item.hidrolik_gereksinimi }}</p>
+                                </div>
+                                {% endif %}
+                                {% if item.traktor_orta_noktasindan_max_kol_uzunlugu %}
+                                <div>
+                                    <p>{{ item.traktor_orta_noktasindan_max_kol_uzunlugu }}</p>
+                                </div>
+                                {% endif %}
+                                {% if item.calisma_derinligi %}
+                                <div>
+                                    <p>{{ item.calisma_derinligi }}</p>
+                                </div>
+                                {% endif %}
+                                {% if item.capalama_genisligi %}
+                                <div>
+                                    <p>{{ item.capalama_genisligi }} </p>
+                                </div>
+                                {% endif %}
+                                {% if item.agac_sira_arasi %}
+                                <div>
+                                    <p>{{ item.agac_sira_arasi }} </p>
+                                </div>
+                                {% endif %}
+                                {% if item.umumi_genislik %}
+                                <div>
+                                    <p>{{ item.umumi_genislik }} </p>
+                                </div>
+                                {% endif %}
+                                {% if item.isleme_genisliyi %}
+                                <div>
+                                    <p>{{ item.isleme_genisliyi }} </p>
+                                </div>
+                                {% endif %}
+                                {% if item.ilerleme_sureti %}
+                                <div>
+                                    <p>{{ item.ilerleme_sureti }}</p>
+                                </div>
+                                {% endif %}
+                                {% if item.ozellik_1 %}
+                                <div>
+                                    <p>{{ item.ozellik_1 }}</p>
+                                </div>
+                                {% endif %}
+                                {% if item.ozellik_2 %}
+                                <div>
+                                    <p>{{ item.ozellik_2 }}</p>
+                                </div>
+                                {% endif %}
+                                {% if item.ozellik_3 %}
+                                <div>
+                                    <p>{{ item.ozellik_3 }}</p>
+                                </div>
+                                {% endif %}
+                                {% if item.ozellik_4 %}
+                                <div>
+                                    <p>{{ item.ozellik_4 }}</p>
+                                </div>
+                                {% endif %}
+                        {% endfor %}
+                </div>
+            {% endif %}
+            </div>
+        </section>
+</main>
+
+{% include 'footer.html' %}
+
+<script>
+    const count = document.querySelectorAll('#header').length
+    const container = document.querySelector('.fields-container-grid')
+    container.style.gridTemplateColumns = `repeat(${count}, 1fr)`
+</script>
+{% endblock %}

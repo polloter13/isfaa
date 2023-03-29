@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block header %}
+<title>Tinglər</title>
+<link rel="stylesheet" href="{% static 'css/plants.css' %}">
+{% for plant in plants %}
+<meta name="keywords" content="{{ plant.name }}">
+{% endfor %}
+{% endblock %}
+
+{% block content %}
+{% include 'navbar.html' %}
+
+
+<main>
+    <h1>Tinglər</h1>
+    <div class="container">
+        {% for plant in plants %}
+        <div onclick="location.href=`{% url 'plant-type' plant.id %}`">
+                <img src="/static/{{ plant.image }} " alt="">
+            <p>{{ plant.name }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</main>
+
+{% include 'footer.html' %}
+
+
+
+{% endblock %}

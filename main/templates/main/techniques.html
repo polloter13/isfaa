@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block header %}
+<title>Texnikalar</title>
+<link rel="stylesheet" href="{% static 'css/techniques.css' %}">
+{% endblock %}
+
+{% block content %}
+{% include 'navbar.html' %}
+
+<main>
+    <div class="product-item" onclick="location.href=`{% url 'texnika' %}`">
+        <div class="product-image">
+            <img src="{% static 'images/index/agriculture.jpg' %}" alt="Kənd təsərrüfatı texnikaları">
+        </div>
+        <p class="product-link">KƏND TƏSƏRRÜFATI TEXNİKALARI</p>
+    </div>
+    <div class="product-item" onclick="location.href=`{% url 'tools' %}`">
+        <div class="product-image">
+            <img src="{% static 'images/index/tools.jpg' %}" alt="Bağ-bostan alətləri">
+        </div>
+        <p class="product-link">BAĞ-BOSTAN ALƏTLƏRİ</p>
+    </div>
+</main>
+
+{% include 'footer.html' %}
+{% endblock %}

@@ -1,0 +1,74 @@
+main {
+    width: 90%;
+    margin: auto;
+    margin-top: 30px;
+}
+
+h1 {
+    margin-bottom: 15px;
+}
+
+.container {
+    display: flex;
+    width: 90%;
+    margin: auto;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+    align-items: center;
+    gap: 2rem;
+}
+
+.texnika .content {
+    flex: 0 0 25%;
+}
+
+.content {
+    flex: 0 0 15%;
+    cursor: pointer;
+}
+
+.content p {
+    text-align: center;
+}
+
+.image-container img {
+    width: 100%;
+    margin-bottom: 10px;
+    aspect-ratio: 1 / 1;
+}
+
+
+
+.tool {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tool-image-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.tool img {
+    max-width: 200px;
+    height: 100%;
+
+}
+
+.tool p {
+    text-align: center;
+}
+
+@media (max-width: 700px) {
+    .fertilizers p, .texnika p {
+        font-size: .7em;
+    }
+    .container-tools {
+        justify-content: center;
+    }
+}

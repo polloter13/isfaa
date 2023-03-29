@@ -1,0 +1,143 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block header %}
+<title>Qallereya</title>
+<link rel="stylesheet" href="{% static 'css/gallery.css' %}">
+{% endblock %}
+
+
+
+{% block content %}
+{% include 'navbar.html' %}
+
+<div class="modal-container" id="modal-container">
+    <img src="{% static 'images/close.png' %}" alt="close icon" class="close-icon" id="close-icon">
+</div>
+
+<main>
+    <h1>Qalereya</h1>
+    <div class="container">
+        <div class="video-container">
+            <div class="video">
+                <img src="{% static 'images/thumbnails/yevlax.png' %}" alt="thumbnail">
+                <img src="{% static 'images/play-button.png' %}" alt="play-button" class="play-button">
+            </div>
+            <div class="video">
+                <img src="{% static 'images/thumbnails/main.png' %}" alt="thumbnail">
+                <img src="{% static 'images/play-button.png' %}" alt="play-button" class="play-button">
+            </div>
+            <div class="video">
+                <img src="{% static 'images/thumbnails/qusar.png' %}" alt="thumbnail">
+                <img src="{% static 'images/play-button.png' %}" alt="play-button" class="play-button">
+            </div>
+        </div>
+    </div>
+
+    <div class="image-container" id="gallery">
+        <div class="image-cell">
+            <img src="{% static 'images/gallery/main-photo-1.jpeg' %}" alt="gallery image">
+            <div class="filter"></div>
+        </div>
+        <div class="image-cell">
+            <img src="{% static 'images/gallery/main-photo-2.jpeg' %}" alt="gallery image">
+            <div class="filter"></div>
+        </div>
+        <div class="image-cell">
+            <img src="{% static 'images/gallery/main-photo-3.jpeg' %}" alt="gallery image">
+            <div class="filter"></div>
+        </div>
+        <div class="image-cell">
+            <img src="{% static 'images/gallery/main-photo-4.jpeg' %}" alt="gallery image">
+            <div class="filter"></div>
+        </div>
+        <div class="image-cell">
+            <img src="{% static 'images/gallery/main-photo-5.jpeg' %}" alt="gallery image">
+            <div class="filter"></div>
+        </div>
+        <div class="image-cell">
+            <img src="{% static 'images/gallery/main-photo-6.jpeg' %}" alt="gallery image">
+            <div class="filter"></div>
+        </div>
+        <div class="image-cell">
+            <img src="{% static 'images/gallery/main-photo-7.jpg' %}" alt="gallery image">
+            <div class="filter"></div>
+        </div>
+        <div class="image-cell">
+            <img src="{% static 'images/gallery/main-photo-8.jpg' %}" alt="gallery image">
+            <div class="filter"></div>
+        </div>
+        <div class="image-cell">
+            <img src="{% static 'images/gallery/main-photo-9.jpg' %}" alt="gallery image">
+            <div class="filter"></div>
+        </div>
+        <div class="image-cell">
+            <img src="{% static 'images/gallery/main-photo-10.jpg' %}" alt="gallery image">
+            <div class="filter"></div>
+        </div>
+        <div class="image-cell">
+            <img src="{% static 'images/gallery/main-photo-11.jpg' %}" alt="gallery image">
+            <div class="filter"></div>
+        </div>
+        <div class="image-cell">
+            <img src="{% static 'images/gallery/main-photo-12.jpg' %}" alt="gallery image">
+            <div class="filter"></div>
+        </div>
+        <div class="image-cell">
+            <img src="{% static 'images/gallery/main-photo-13.jpg' %}" alt="gallery image">
+            <div class="filter"></div>
+        </div>
+        <div class="image-cell">
+            <img src="{% static 'images/gallery/main-photo-14.jpg' %}" alt="gallery image">
+            <div class="filter"></div>
+        </div>
+        <div class="image-cell">
+            <img src="{% static 'images/gallery/main-photo-15.jpeg' %}" alt="gallery image">
+            <div class="filter"></div>
+        </div>
+        <div class="image-cell">
+            <img src="{% static 'images/gallery/main-photo-16.jpeg' %}" alt="gallery image">
+            <div class="filter"></div>
+        </div>
+        <div class="image-cell">
+            <img src="{% static 'images/gallery/main-photo-17.jpeg' %}" alt="gallery image">
+            <div class="filter"></div>
+        </div>
+        <div class="image-cell">
+            <img src="{% static 'images/gallery/main-photo-18.jpeg' %}" alt="gallery image">
+            <div class="filter"></div>
+        </div>
+        <div class="image-cell">
+            <img src="{% static 'images/gallery/main-photo-19.jpeg' %}" alt="gallery image">
+            <div class="filter"></div>
+        </div>
+        <div class="image-cell">
+            <img src="{% static 'images/gallery/main-photo-20.jpeg' %}" alt="gallery image">
+            <div class="filter"></div>
+        </div>
+        <div class="image-cell">
+            <img src="{% static 'images/gallery/main-photo-21.jpeg' %}" alt="gallery image">
+            <div class="filter"></div>
+        </div>
+        <div class="image-cell">
+            <img src="{% static 'images/gallery/main-photo-22.jpeg' %}" alt="gallery image">
+            <div class="filter"></div>
+        </div>
+        <div class="image-cell">
+            <img src="{% static 'images/gallery/main-photo-23.jpeg' %}" alt="gallery image">
+            <div class="filter"></div>
+        </div>
+        <div class="image-cell">
+            <img src="{% static 'images/gallery/main-photo-24.jpeg' %}" alt="gallery image">
+            <div class="filter"></div>
+        </div>
+        <div class="image-cell">
+            <img src="{% static 'images/gallery/main-photo-25.jpeg' %}" alt="gallery image">
+            <div class="filter"></div>
+        </div>
+    </div>
+</main>
+
+{% include 'footer.html' %}
+
+<script src="{% static 'js/gallery.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,88 @@
+{% load static %}
+
+<div class="header">
+    <p class="phone"><span>Telefon:</span> <a href="tel:+994552806360">(+994) 55 280 63 60</a><a class="wp-link" target="_blank" href="https://wa.me/994552806360"><img src="{% static 'images/index/whatsapp.png' %}" alt="whatsapp"></a></p>
+    <p class="address">
+    <span>ÜNVAN:</span> Qusar-Xudat yolu 
+    </p>
+</div>
+
+<header class="navbar-container" id="navbar">
+    <div class="toggle-button">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+  <div class="logo-container">
+      <a href="{% url 'index' %}" class="logo-link">
+          <img src="{% static 'images/logo.png' %}" alt="logo" class="logo-link">
+      </a>
+  </div>
+  <nav class="navbar" id="nav">
+    <div class="navbar-close-icon">
+        <img src="{% static 'images/close.png' %}" alt="close icon">
+    </div>
+      <ul>
+        <li>
+            {% if link == 'home' %}
+            <a href="{% url 'index' %}" class="link-active">ANA SƏHİFƏ</a>
+            {% else %}
+            <a href="{% url 'index' %}">ANA SƏHİFƏ</a>
+            {% endif %}
+        </li>
+        <li>
+            {% if link == 'about' %}
+            <a href="{% url 'about' %}" class="link-active">HAQQIMIZDA</a>
+            {% else %}
+            <a href="{% url 'about' %}">HAQQIMIZDA</a>
+            {% endif %}
+        </li>
+        <li>
+            {% if link == 'plants' %}
+            <a href="{% url 'plants' %}" class="link-active">TİNGLƏR</a></li>
+            {% else %}
+            <a href="{% url 'plants' %}">TİNGLƏR</a></li>
+            {% endif %}
+        <li>
+            {% if link == 'village' %}
+            <a href="{% url 'techniques' %}" class="link-active">KƏND TƏSƏRRÜFATI TEXNİKALARI</a></li>
+            {% else %}
+            <a href="{% url 'techniques' %}">KƏND TƏSƏRRÜFATI TEXNİKALARI</a></li>
+            {% endif %}
+        <li>
+            {% if link == 'watering' %}
+            <a href="{% url 'watering' %}" class="link-active">SUVARMA</a></li>
+            {% else %}
+            <a href="{% url 'watering' %}">SUVARMA</a></li>
+            {% endif %}
+        <li>
+            {% if link == 'fertilizer' %}
+            <a href="{% url 'fertilizers' %}" class="link-active">GÜBRƏLƏR</a></li>
+            {% else %}
+            <a href="{% url 'fertilizers' %}">GÜBRƏLƏR</a></li>
+            {% endif %}
+        <li>
+            {% if link == 'news' %}
+            <a href="{% url 'news' %}" class="link-active">XƏBƏRLƏR</a></li>
+            {% else %}
+            <a href="{% url 'news' %}">XƏBƏRLƏR</a></li>
+            {% endif %}
+        <li>
+            {% if link == 'gallery' %}
+            <a href="{% url 'gallery' %}" class="link-active">QALEREYA</a></li>
+            {% else %}
+            <a href="{% url 'gallery' %}">QALEREYA</a></li>
+            {% endif %}
+        <li>
+            {% if link == 'contact' %}
+            <a href="{% url 'contact' %}" class="link-active">ƏLAQƏ</a></li>
+            {% else %}
+            <a href="{% url 'contact' %}">ƏLAQƏ</a></li>
+            {% endif %}
+      </ul>
+    </nav>
+
+    <form action="{% url 'index' %}" method="get">
+        <input type="text" placeholder="Axtar" class="search" name="q">
+    </form>
+</header>

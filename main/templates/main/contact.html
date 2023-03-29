@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block header %}
+<title>Əlaqə</title>
+<link rel="stylesheet" href="{% static 'css/contact.css' %}">
+{% endblock %}
+{% block content %}
+{% include 'navbar.html' %}
+
+<section>
+  <p class="contact-header">Əlaqə</p>
+  <div class="container">
+    <div class="contact-number-container">
+      <div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M256 80C149.9 80 62.4 159.4 49.6 262c9.4-3.8 19.6-6 30.4-6c26.5 0 48 21.5 48 48V432c0 26.5-21.5 48-48 48c-44.2 0-80-35.8-80-80V384 336 288C0 146.6 114.6 32 256 32s256 114.6 256 256v48 48 16c0 44.2-35.8 80-80 80c-26.5 0-48-21.5-48-48V304c0-26.5 21.5-48 48-48c10.8 0 21 2.1 30.4 6C449.6 159.4 362.1 80 256 80z"/></svg>
+      </div>
+      <div>
+        <p>(+994) 55 280 63 60</p>
+        <p>Hər gün 9:30-dan 18:30-a kimi</p>
+      </div>
+    </div>
+    <div class="contact-number-container">
+      <div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"/></svg>
+      </div>
+      <div>
+        <p>info@isfa.az</p>
+        <p>Məhsullarımız və ya xidmətlərimizlə bağlı hər hansı sualınız varmı? Bizə e-poçt göndərin və biz sizə ən qısa zamanda cavab verəcəyik.​ </p>
+      </div>
+    </div>
+    <div class="form-container">
+      <form action="." method="post">
+        {% csrf_token %}
+          <div class="user-info-field-container">
+            <label for="name" id="name">Ad *</label>
+            <label for="name" id="name">E-Poçt *</label>
+            {{ form.name }}
+            {{ form.email }}
+          </div>
+          <div class="textarea-field-container">
+            <label for="message" id="message">Mesaj</label>
+            {{ form.content }}
+          </div>
+          <div class="btn-container">
+            <button type="submit" class="btn-submit">Mesaj Göndər</button>
+          </div>
+      </form>
+    </div>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2990.9546346715306!2d48.45957737660217!3d41.44020599271639!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4037c150c772d139%3A0x3ae3814ef2c49738!2sISFA%20Green%20Life!5e0!3m2!1sen!2sus!4v1669128144872!5m2!1sen!2sus" class="google-map" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</section>
+
+
+{% include 'footer.html' %}
+
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block header %}
+<title>Kənd təsərrüfatı texnikaları</title>
+<link rel="stylesheet" href="{% static 'css/texnika.css' %}">
+{% for item in texnika %}
+<meta name="keywords" content="{{ item.ad }}">
+{% endfor %}
+{% endblock %}
+
+
+{% block content %}
+{% include 'navbar.html' %}
+
+<main>
+    <section>
+        {% for item in texnika %}
+        <div class="item" onclick="location.href = `{% url 'texnika-tool' item.id %}`">
+            <img src="/static/{{ item.image }}" alt="{{ item.ad }}">
+            <p>{{ item.ad }}</p>
+        </div>
+        {% endfor %}
+    </section>
+</main>
+
+
+{% include 'footer.html' %}
+
+{% endblock %}

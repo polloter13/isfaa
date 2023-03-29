@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block header %}
+<title>{{ parent }}</title>
+<link rel="stylesheet" href="{% static 'css/plants.css' %}">
+{% endblock %}
+
+{% block content %}
+{% include 'navbar.html' %}
+
+<main>
+    <h1>{{ parent.name }} Çeşidləri</h1>
+    <div class="container">
+        {% for type in plant %}
+        <div onclick="location.href=`{% url 'type' type.id %}`">
+            <img src="/static/{{ type.image }}" alt="{{ type.name }} tingi">
+            <p>{{ type.name }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</main>
+
+{% include 'footer.html' %}
+
+
+{% endblock %}

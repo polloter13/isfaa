@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block header %}
+<title>Gübrələr</title>
+<link rel="stylesheet" href="{% static 'css/fertilizers.css' %}">
+{% for item in data %}
+<meta name="keyword" content="{{ item }}">
+{% endfor %}
+{% endblock %}
+
+
+{% block content %}
+{% include 'navbar.html' %}
+
+<main>
+    <div class="container">
+        {% for item in data %}
+            <div class="item" onclick="document.location.href=`{% url 'fertilizer_item' item.id %}`">
+                <img src="/static/{{ item.image }}" alt="Fertilizer">
+                <p>{{ item }}</p>
+            </div>
+        {% endfor %}
+    </div>
+</main>
+
+{% include 'footer.html' %}
+
+{% endblock %}

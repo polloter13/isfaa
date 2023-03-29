@@ -1,0 +1,132 @@
+main {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    width: 90%;
+    height: max-content;
+    margin-top: 50px;
+    margin-inline: auto;
+    position: relative;
+    gap: 2rem;
+}
+
+
+main img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+}
+
+.content-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+section {
+    width: 100%;
+    height: 100%;
+    /* margin-left: 35px; */
+}
+
+.info-container {
+    padding-left: 20px;
+}
+
+
+h1 {
+    font-size: xx-large;
+    margin-bottom: 10px;
+}
+
+.info {
+    display: grid;
+    gap: 30px;
+    width: 80%;
+    /* margin-top: 10px; */
+    grid-template-columns: 40% 1fr;
+    border-top: 1px solid rgba(50, 50, 50, .3);
+    border-bottom: 1px solid rgba(50, 50, 50, .3);
+    padding-block: 15px ;
+}
+
+/* .types-container h1 {
+    margin-left: 20px;
+} */
+
+.types {
+    display: flex;
+    width: 100%;
+    cursor: pointer;
+    font-size: 1.3rem;
+    background-color: rgb(33, 163, 87);
+    border-radius: 5px;
+    padding-block: .9em;
+    padding-left: 10px;
+    /* margin-left: 20px; */
+    margin-bottom: 10px;
+    color: white;
+    transition: all .15s;
+}
+
+.types:hover {
+    background-color: rgb(27, 104, 57);
+}
+
+.extra-types-container {
+    width: 90%;
+    margin-inline: auto;
+    margin-block: 50px;
+    text-align: center;
+}
+
+.sorts {
+    margin-top: 30px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2rem;
+}
+
+.sorts img{
+    width: 100%;
+    aspect-ratio: 1 / 1;
+}
+
+.sorts p {
+    font-size: 1.7rem;
+}
+
+.sorts div {
+    cursor: pointer;
+}
+
+@media (max-width: 950px) {
+    main {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    p {
+        font-size: .9em;
+    }
+
+    .sorts p {
+        font-size: .9em;
+    }
+}
+
+@media (max-width: 700px) {
+    .types-container {
+        display: none;
+    }
+    main {
+        display: flex;
+    }
+}
+
+@media (max-width: 550px) {
+    .sorts p {
+        font-size: .7em;
+    }
+}

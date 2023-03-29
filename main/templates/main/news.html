@@ -1,0 +1,160 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block header %}
+<title>Xəbərlər</title>
+<link rel="stylesheet" href="{% static 'css/news.css' %}">
+{% endblock %}
+
+{% block content %}
+{% include 'navbar.html' %}
+
+<div class="modal-container" id="modal-container">
+    <img src="{% static 'images/close.png' %}" alt="close icon" class="close-icon" id="close-icon">
+</div>
+
+<main>
+    <section>
+        <h1>
+            21.10.2022 Eldən Çölə televiziya proqramı İSFA-nın qonağı oldu
+        </h1>
+        <div class="video-container">
+            <div class="video2">
+                <p>
+                    <a href="https://www.youtube.com/watch?v=B2lAXAWoy6g">https://www.youtube.com/watch?v=B2lAXAWoy6g</a>
+                </p>
+            </div>
+            <div class="video2">
+                <p>
+                    <a href="https://www.youtube.com/watch?v=ARUgC-4pb9A">https://www.youtube.com/watch?v=ARUgC-4pb9A</a>
+                </p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <h1>
+            12.10.2022 Xəzər Xəbər buraxılışı
+        </h1>
+        <div class="video-container">
+            <div class="video">
+                <p>
+                    <a href="https://www.youtube.com/watch?v=1812wKrk8RE">https://www.youtube.com/watch?v=1812wKrk8RE</a>
+                </p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <h1>
+            11.10.2022 Azərbaycanın “ISFA” MMC şirkəti Qırğızıstana meyvə tingləri ixrac edəcək
+        </h1>
+        <p>Oktyabrın 11-də Bişkekdə Azərbaycanla Qırğızıstan arasında Birinci Dövlətlərarası Şuranın geniş tərkibdə iclası başa çatdıqdan sonra Azərbaycan Respublikasının Prezidenti İlham Əliyevin və Qırğız Respublikasının Prezidenti Sadır Japarovun iştirakı ilə Azərbaycan-Qırğızıstan müqavilələrinin imzalanması mərasimi olub.Bu müqavilələrdən ixraca dair imzalanan müqaviləyə əsasən, Yevlax Pilot Aqropark layihəsinin ilk rezidenti “İSFA” MMC tərəfindən Qırğızıstana ümumilikdə 40 min gilas, badam və nektarin tinglərinin göndərilməsi planlaşdırılır.
+            Növbəti mərhələdə isə, Gürcüstana 100 min qoz tinginin, Rusiyaya isə 150 min ədəd alma, gilas və nektarin tinglərinin ixracı nəzərdə tutulur.
+        </p>
+        <div class="image-container" id="gallery">
+            <div class="image-cell">
+                <img src="{% static 'images/news/part 1/1.jpg' %}" alt="An image of a news report">
+                <div class="filter"></div>
+            </div>
+            <div class="image-cell">
+                <img src="{% static 'images/news/part 1/2.jpeg' %}" alt="An image of a news report">
+                <div class="filter"></div>
+            </div>
+            <div class="image-cell">
+                <img src="{% static 'images/news/part 1/3.jpeg' %}" alt="An image of a news report">
+                <div class="filter"></div>
+            </div>
+            <div class="image-cell">
+                <img src="{% static 'images/news/part 1/4.jpeg' %}" alt="An image of a news report">
+                <div class="filter"></div>
+            </div>
+            <div class="image-cell">
+                <img src="{% static 'images/news/part 1/5.jpeg' %}" alt="An image of a news report">
+                <div class="filter"></div>
+            </div>
+            <div class="image-cell">
+                <img src="{% static 'images/news/part 1/6.jpeg' %}" alt="An image of a news report">
+                <div class="filter"></div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <h1>
+            01.07.2022 Yevlax Pilot Aqroparka mediatur təşkil edilib
+        </h1>
+        <p>
+            <a href="https://www.youtube.com/watch?v=D8cH55x7Jhg">https://www.youtube.com/watch?v=D8cH55x7Jhg</a> 
+        </p>
+    </section>
+    <section>
+        <h1>24.06.2022 “İSFA” MMC-nin “EL TV” Telekanalının qonağı olduğu müsahibə:</h1>
+        <p>
+            <a href="https://www.youtube.com/watch?v=d_anuSmGjLw">https://www.youtube.com/watch?v=d_anuSmGjLw</a>
+        </p>
+    </section>
+    <section>
+        <h1>08.01.2022   Yevlax Pilot Aqropark layihəsində “İSFA” MMC- nin fəaliyyətləri </h1>
+        <p>
+            Yevlax Pilot Aqropark layihəsinin ilk rezidenti olan “İSFA” MMC artıq sahədəki fəaliyyətlərinə başlamışdır. Dövlət tərəfindən şirkətə verilmiş əkin sahəsinin 40 hektarını meyvə bağları, 10 hektarını isə tingçilik təşkil edir. Meyvə bağlarında “Ağıllı bağ” layihəsi və yüksək keyfiyyətdə quraşdırılmış damlama-suvarma sistemləri ilə burada gilas, nektarin, şaftalı,alça, badam və s. kimi erkən yetişən çeşidlərin yetişdirilməsinə başlanmışdır. Tingçilik üçün ayrılmış 10 hektar ərazidə isə 18 növ meyvənin 100-dən çox çeşidinin laboratoriyadan alınmış calaqaltılara calaq edilərək yetişdirilməsi və satışı nəzərdə tutulmuşdur. İlkin mərhələdə bu il üçün 500 000 tingin yetişdirilməsi və bazara çıxarılması nəzərdə tutulmuşdur. Yevlax Pilot Aqropark layihəsində “İSFA” MMC nəzdində daimi olaraq 11 bir işçi xidmət göstərərkən mövsümi olaraq 2500-3000 arası muzdlu işçinin fəaliyyəti nəzərdə tutulmuşdur. 
+Daha çoxu və ətraflı məlumat üçün aşağıdakı linkə keçid edə bilərsiniz:
+        <a href="https://www.youtube.com/watch?v=-ndyTyRQU9s">https://www.youtube.com/watch?v=-ndyTyRQU9s</a>
+        </p>
+    </section>
+    <section>
+        <h1>04.12.2021  Yevlax Pilot Aqroparkının açılışı olub. </h1>
+        <p>
+            Bu gün iqtisadiyyat naziri Mikayıl Cabbarovun və Yevlax Rayon İcra Hakimiyyətinin başçısı Anar Tağıyevin iştirakı ilə "Yevlax Pilot Aqropark"ın rəmzi açılışı keçirilib. Ümumi dəyəri 103 milyon manat olan və ümumilikdə 1147 hektar torpaq sahəsini təşkil edən layihədə əkin sahəsi sahibkarlar üçün 20 hektarlıq parsellərə bölünmüşdür. Bu layihənin ilk rezidenti olan “İSFA” MMC şirkəti iqtisadiyyat naziri Mikayıl Cabbarovu, Yevlax Rayon İcra Hakimiyyətinin başçısı Anar Tağıyevi və digər rezidentləri qarşılayaraq açılış mərasimində iştirak etmiş və ilk meyvə tinginin Mikayıl Cabbarov tərəfindən əkilməsi ilə artıq fəaliyyətə başlamışdır. Aqroparkda “Ağıllı bağ” və damlama-suvarma sisteminin təşkili ilə fəaliyyət göstərən “İSFA” MMC 30-a yaxın daimi, 1000-ə yaxın mövsümi işçinin əməyindən istifadəni nəzərdə tutur. Bölgədə gilas, nektarin, şaftalı, alça, badam və s. kimi erkən yetişən çeşidlərin əkilməsi planlaşdırılmışdır.
+
+Daha çoxu və ətraflı məlumat üçün aşağıdakı linkə keçid edə bilərsiniz: <br>
+        <a href="https://www.youtube.com/watch?v=1lrVhzhA6p0">https://www.youtube.com/watch?v=1lrVhzhA6p0</a>
+        </p>
+        <div class="image-container" id="gallery2">
+            <div class="image-cell">
+                <img src="{% static 'images/news/part 2/1.jpeg' %}" alt="An image of a news report">
+                <div class="filter"></div>
+            </div>
+            <div class="image-cell">
+                <img src="{% static 'images/news/part 2/3.jpeg' %}" alt="An image of a news report">
+                <div class="filter"></div>
+            </div>
+            <div class="image-cell">
+                <img src="{% static 'images/news/part 2/4.jpeg' %}" alt="An image of a news report">
+                <div class="filter"></div>
+            </div>
+            <div class="image-cell">
+                <img src="{% static 'images/news/part 2/5.jpeg' %}" alt="An image of a news report">
+                <div class="filter"></div>
+            </div>
+            <div class="image-cell">
+                <img src="{% static 'images/news/part 2/6.jpeg' %}" alt="An image of a news report">
+                <div class="filter"></div>
+            </div>
+            <div class="image-cell">
+                <img src="{% static 'images/news/part 2/7.jpeg' %}" alt="An image of a news report">
+                <div class="filter"></div>
+            </div>
+            <div class="image-cell">
+                <img src="{% static 'images/news/part 2/8.jpeg' %}" alt="An image of a news report">
+                <div class="filter"></div>
+            </div>
+            <div class="image-cell">
+                <img src="{% static 'images/news/part 2/9.jpeg' %}" alt="An image of a news report">
+                <div class="filter"></div>
+            </div>
+            <div class="image-cell">
+                <img src="{% static 'images/news/part 2/10.jpeg' %}" alt="An image of a news report">
+                <div class="filter"></div>
+            </div>
+            <div class="image-cell">
+                <img src="{% static 'images/news/part 2/11.jpeg' %}" alt="An image of a news report">
+                <div class="filter"></div>
+            </div>
+            <div class="image-cell">
+                <img src="{% static 'images/news/part 2/12.jpeg' %}" alt="An image of a news report">
+                <div class="filter"></div>
+            </div>
+        </div>
+
+    </section>
+    
+</main>
+<script src="{% static 'js/news.js' %}"></script>
+{% endblock %}

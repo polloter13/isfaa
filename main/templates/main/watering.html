@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block header %}
+<title>Suvarma texnikaları</title>
+<link rel="stylesheet" href="{% static 'css/watering.css' %}">
+{% endblock %}
+
+{% block content %}
+{% include 'navbar.html' %}
+
+<main>
+    <div class="container">
+        {% for item in data %}
+        <div class="image-container" onclick="location.href=`{% url 'watering_item' item.id %}`">
+            <img src="/static/{{ item.image }}" alt="{{ item.name }}">
+            <p>{{ item.name }}</p>
+        </div>
+        {% endfor %}
+    </div>
+    
+
+</main>
+
+{% include 'footer.html' %}
+
+{% endblock %}

@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block header %}
+<title>Axtarış nəticələri</title>
+<link rel="stylesheet" href="{% static 'css/search.css' %}">
+{% endblock %}
+
+{% block content %}
+{% include 'navbar.html' %}
+
+<main>
+    {% if plants %}
+    <h1>Tinglər</h1>
+    <div class="container">
+        {% for item in plants %}
+        <div class="content" onclick="location.href=`{% url 'plant-type' item.id %}`">
+            <div class="image-container">
+                <img src="/static/{{item.image}}" alt="{{ item.name }}">
+            </div>
+            <p>{{ item.name }}</p>
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+    
+    {% if plant %}
+    <h1>Ting çeşidləri</h1>
+    <div class="container">
+        {% for item in plant %}
+        <div class="content" onclick="location.href=`{% url 'type' item.id %}`">
+            <div class="image-container">
+                <img src="/static/{{item.image}}" alt="{{ item.name }}">
+            </div>
+            <p>{{ item.name }}</p>
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+
+    {% if fertilizers %}
+    <h1>Gübrələr</h1>
+    <div class="container">
+        {% for item in fertilizers %}
+        <div class="content fertilizers" onclick="location.href=`{% url 'fertilizer_item' item.id %}`">
+            <div class="image-container">
+                <img src="/static/{{item.image}}" alt="{{ item.name }}">
+            </div>
+            <p>{{ item.name }}</p>
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+    
+    {% if watering %}
+    <h1>Suvarma</h1>
+    <div class="container texnika">
+        {% for item in watering %}
+        <div class="content" onclick="location.href=`{% url 'watering_item' item.id %}`">
+            <div class="image-container">
+                <img src="/static/{{item.image}}" alt="{{ item.name }}">
+            </div>
+            <p>{{ item.name }}</p>
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+    
+    {% if texnikas %}
+    <h1>Texnika</h1>
+    <div class="container texnika">
+        {% for item in texnikas %}
+        <div class="content" onclick="location.href=`{% url 'texnika-tool' item.id %}`">
+            <div class="image-container">
+                <img src="/static/{{item.image}}" alt="{{ item.ad }}">
+            </div>
+            <p>{{ item.ad }}</p>
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    {% if tools %}
+    <h1>Bağ-bostan alətləri</h1>
+    <div class="container container-tools">
+        {% for item in tools %}
+        <div class="tool">
+            <div class="tool-image-container">
+                <img src="/static/{{ item.image }}" alt="{{ item.name }}">
+            </div>
+            <p>{{ item.name }}</p>
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    {% if not tools and not texnikas and not watering and not fertilizers and not plant and not plants %}
+    <h1>Axtarış üzrə heç nə tapılmadı</h1>
+    {% endif %}
+
+</main>
+
+
+{% include 'footer.html' %}
+
+{% endblock %}

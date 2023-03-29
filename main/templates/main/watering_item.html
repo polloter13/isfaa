@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block header %}
+<title>{{ item.name }}</title>
+<link rel="stylesheet" href="{% static 'css/watering_item.css' %}">
+{% endblock %}
+
+{% block content %}
+{% include 'navbar.html' %}
+
+<main>
+    <div class="container">
+        <img src="/static/{{ item.image }}" alt="{{ item.name }}">
+        <div class="content">
+            <div class="fields-container">
+                {% if item.watering_tool_set.all.0.mehsul_kodu %}
+                    <div>
+                        <p><b>Məhsul kodu</b></p>
+                    {% for x in item.watering_tool_set.all %}
+                    <p>{{ x.mehsul_kodu }}</p>
+                    {% endfor %}
+                    </div>
+                    {% endif %}
+                    {% if item.watering_tool_set.all.0.giris_cixis %}
+                    <div>
+                        <p><b>Giriş-çıxış</b></p>
+                    {% for x in item.watering_tool_set.all %}
+                        <p>{{ x.giris_cixis }}</p>
+                    {% endfor %}
+                </div>
+                {% endif %}
+                {% if item.watering_tool_set.all.0.hecm %}
+                <div>
+                    <p><b>Həcm</b></p>
+                    {% for x in item.watering_tool_set.all %}
+                        <p>{{ x.hecm }}</p>
+                    {% endfor %}
+                </div>
+                {% endif %}
+                {% if item.watering_tool_set.all.0.yosun_filteri %}
+                <div>
+                    <p><b>Yosun Filteri</b></p>
+                    {% for x in item.watering_tool_set.all %}
+                        <p>{{ x.yosun_filteri }}</p>
+                    {% endfor %}
+                </div>
+                {% endif %}
+                {% if item.watering_tool_set.all.0.plastik_filter %}
+                <div>
+                    <p><b>Plastik Filter</b></p>
+                    {% for x in item.watering_tool_set.all %}
+                        <p>{{ x.plastik_filter }}</p>
+                    {% endfor %}
+                </div>
+                {% endif %}
+                {% if item.watering_tool_set.all.0.avtomatik_filter %}
+                <div>
+                    <p><b>Avtomatik Filter</b></p>
+                    {% for x in item.watering_tool_set.all %}
+                        <p>{{ x.avtomatik_filter }}</p>
+                    {% endfor %}
+                </div>
+                {% endif %}
+                {% if item.watering_tool_set.all.0.qum_tanki %}
+                <div>
+                    <p><b>Qum Tankı</b></p>
+                    {% for x in item.watering_tool_set.all %}
+                        <p>{{ x.qum_tanki }}</p>
+                    {% endfor %}
+                </div>
+                {% endif %}
+                {% if item.watering_tool_set.all.0.suzme_sethi %}
+                <div>
+                    <p><b>Süzmə səthi</b></p>
+                    {% for x in item.watering_tool_set.all %}
+                        <p>{{ x.suzme_sethi }} sm<sup>2</sup></p>
+                    {% endfor %}
+                    </div>
+                {% endif %}
+                </div>
+                <div>
+                    <p>
+                        {{ item.content }}
+                    </p>
+                </div>
+            </div>
+    </div>
+    
+
+</main>
+
+
+{% include 'footer.html' %}
+
+{% endblock %}

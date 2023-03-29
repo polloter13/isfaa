@@ -1,0 +1,116 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block header %}
+<title>{{ type }}</title>
+<link rel="stylesheet" href="{% static 'css/type.css' %}">
+{% endblock %}
+
+{% block content %}
+{% include 'navbar.html' %}
+
+<main>
+    <div class="content-container">
+        <img src="/static/{{ type.image }}" alt="{{ type.name }} tingi">
+        <div>
+            <section class="info-container">
+                <h1>{{ type.name }}</h1>
+                {% if type.origin %}
+                <div class="info">
+                    <p><b>Mənşəyi</b></p>
+                    <p>{{ type.origin }}</p>
+                </div>
+                {% endif %}
+                {% if type.tozlayici %}
+                <div class="info">
+                    <p><b>Tozlayıcı</b></p>
+                    <p>{{ type.tozlayici }}</p>
+                </div>
+                {% endif %}
+                {% if type.mehsul_zamani %}
+                <div class="info">
+                    <p><b>Məhsul zamanı</b></p>
+                    <p>{{ type.mehsul_zamani }}</p>
+                </div>
+                {% endif %}
+                {% if type.meyve_agirligi %}
+                <div class="info">
+                    <p><b>Meyvə ağırlığı</b></p>
+                    <p>{{ type.meyve_agirligi }}</p>
+                </div>
+                {% endif %}
+                {% if type.qabigli_meyve_boyu %}
+                <div class="info">
+                    <p><b>Qabıqlı meyvə boyu</b></p>
+                    <p>{{ type.qabigli_meyve_boyu }} mm</p>
+                </div>
+                {% endif %}
+                {% if type.ic_meyve_boyu %}
+                <div class="info">
+                    <p><b>İç meyvə boyu</b></p>
+                    <p>{{ type.ic_meyve_boyu }} mm</p>
+                </div>
+                {% endif %}
+                {% if type.qabigli_meyve_agirligi %}
+                <div class="info">
+                    <p><b>Qabıqlı meyvə ağırlığı</b></p>
+                    <p>{{ type.qabigli_meyve_agirligi }} qr</p>
+                </div>
+                {% endif %}
+                {% if type.rengi %}
+                <div class="info">
+                    <p><b>Rəngi</b></p>
+                    <p>{{ type.rengi }}</p>
+                </div>
+                {% endif %}
+                {% if type.meyve_ic_rengi %}
+                <div class="info">
+                    <p><b>Meyvə iç rəngi</b></p>
+                    <p>{{ type.meyve_ic_rengi }}</p>
+                </div>
+                {% endif %}
+                {% if type.formasi %}
+                <div class="info">
+                    <p><b>Forması</b></p>
+                    <p>{{ type.formasi }}</p>
+                </div>
+                {% endif %}
+                {% if type.kalibr %}
+                <div class="info">
+                    <p><b>Kalibr</b></p>
+                    <p>{{ type.kalibr }}</p>
+                </div>
+                {% endif %}
+            </section>
+        </div>
+    </div>
+    {% if other_types %}
+    <section class="types-container">
+        <h1>{{ parent.name }} Çeşidləri</h1>
+        {% for plant in other_types %}
+        <div class="types" onclick="location.href=`{% url 'type' plant.id %}`">
+            <p>
+                {{ plant }}
+            </p> 
+        </div>
+        {% endfor %}
+    </section>
+    {% endif %}
+</main>
+
+{% if other_types %}
+<section class="extra-types-container">
+    <h1>{{ parent.name }} Çeşidləri</h1>
+    <div class="sorts">
+        {% for plant in other_types %}
+        <div onclick="location.href=`{% url 'type' plant.id %}`">
+            <img src="/static/{{ plant.image }}" alt="plant">
+            <p>{{ plant }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+{% endif %}
+{% include 'footer.html' %}
+
+
+{% endblock %}
