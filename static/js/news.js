@@ -39,48 +39,6 @@ closeIcon.addEventListener("click", () => {
 });
 let index;
 
-videos.forEach(video => {
-  video.addEventListener("click", () => {
-    const rightArrow = document.createElement("img");
-    rightArrow.classList.add("right-arrow");
-    rightArrow.id = "right-arrow";
-    rightArrow.src = "../static/images/index/right-arrow.png";
-
-    const leftArrow = document.createElement("img");
-    leftArrow.classList.add("left-arrow");
-    leftArrow.id = "left-arrow";
-    leftArrow.src = "../static/images/index/left-arrow.png";
-
-    modal.style.display = "flex";
-    let data = video.firstChild.nextSibling.src.split("/");
-    let src =
-      "../static/videos/" + data[data.length - 1].split(".")[0] + ".mp4";
-    index = videosURL.indexOf(data[data.length - 1].split(".")[0] + ".mp4");
-    const node_video = document.createElement("video");
-    node_video.id = "video-root";
-    node_video.setAttribute("controls", "controls");
-    node_video.setAttribute("autoplay", "autoplay");
-
-    leftArrow.addEventListener("click", () => {
-      index = index - 1 < 0 ? videosURL.length - 1 : index - 1;
-      let src = "../static/videos/" + videosURL[index];
-      const node_video = document.getElementById("video-root");
-      node_video.src = src;
-    });
-
-    rightArrow.addEventListener("click", () => {
-      index = index + 1 > videosURL.length - 1 ? 0 : index + 1;
-      let src = "../static/videos/" + videosURL[index];
-      const node_video = document.getElementById("video-root");
-      node_video.src = src;
-    });
-    node_video.className = "modal-video";
-    node_video.src = src;
-    modal.append(rightArrow);
-    modal.append(leftArrow);
-    modal.append(node_video);
-  });
-});
 
 images.forEach(node => {
   node.addEventListener("click", () => {
